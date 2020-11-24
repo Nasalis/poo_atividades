@@ -1,1 +1,1 @@
-# poo_atividades
+# Pasta de atividades de POO
