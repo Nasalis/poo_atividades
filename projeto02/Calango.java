@@ -46,10 +46,6 @@ public class Calango {
             System.out.println("Ô solzin quente");
         }
 
-        if(this.inimigo%2 != 0) {
-
-        }
-
         // System.out.println("Aff, doido, tô cansado, ó");
     }
 
@@ -105,7 +101,7 @@ public class Calango {
                 }else if(this.calangoLive <= 0){
                     System.out.println("Agora tô pistola!");
                     regenerar();
-                }else{
+                }else if(enemyLive > 0 && calangoLive <= 0){
                     System.out.println("Inimigo wins!");
                     this.enemyAlive = false;
                 }
