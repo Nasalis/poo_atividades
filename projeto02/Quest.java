@@ -1,4 +1,4 @@
-package aula04;
+package projeto02;
 
 import java.util.Scanner;
 
@@ -11,7 +11,7 @@ class Mission {
 
     int choiceOption() {
         Scanner decision = new Scanner(System.in);
-        return this.choice = decision.nextInt();
+        return this.choice = decision.nextInt(); 
     }
 
 
