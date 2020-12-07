@@ -24,7 +24,7 @@ class Mission {
     }
 
     void open() {
-        System.out.println("\nBem-vindo ao seu novo jogo! Para iniciar, digite 'init', caso queira sair, 'end'");
+        System.out.println("\nBem-vindo ao seu novo jogo! Para iniciar, digite 'menuTravel init', caso queira sair, 'end'");
     }
 
     void init() {
