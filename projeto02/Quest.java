@@ -17,17 +17,17 @@ class Mission {
 
     void menu(String option) {
             if(option.equals("init")) {
-                init();
+                initGame();
             }else if(option.equals("regions")) {
                 regions();
             }
     }
 
-    void open() {
+    void openGame() {
         System.out.println("\nBem-vindo ao seu novo jogo! Para iniciar, digite 'menuTravel init', caso queira sair, 'end'");
     }
 
-    void init() {
+    void initGame() {
         System.out.println("Digite o nome do seu personagem, região, force e a mana. Caso não conheça as regiões, volte ao menu e digite 'regions'");
         System.out.println("Digite 'create'\n");
     }
@@ -43,7 +43,7 @@ class Mission {
         System.out.println("1. Boletaria\n2. Belmont\n3. Highrock\n4. Deimont\n5. Lightmount\n");
     }
 
-    void start() {
+    void startGame() {
         if(region.equals("Boletaria")) {
             System.out.println("Você se encontra na região de Boletaria, uma antiga região hostial e decadente após os efeitos desastrosos após a Batalha de Nahru-Orkhan há mais de um século.\n");
             System.out.println("Em meio ao ambiente desértico, de arquitetura decrepita, apenas domada pela vegetação que se alastra por cima das antigas e belas construções. Nem mesmo animais selvagens vasculham os locais. Somente aves que decidem demarcar os seus ninhos por cima das altas torres.\n");
@@ -83,7 +83,7 @@ public class Quest {
         Mission character = new Mission();  
         Scanner scanner = new Scanner(System.in);
 
-        character.open();
+        character.openGame();
         
         while(true) {
             String line = scanner.nextLine();
@@ -100,7 +100,7 @@ public class Quest {
             }else if(ui[0].equals("status")) {
                 System.out.println(character);
             }else if(ui[0].equals("start")) {
-                character.start();
+                character.startGame();
             }
         }
 
