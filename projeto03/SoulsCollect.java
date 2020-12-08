@@ -18,36 +18,44 @@ class EnemySouls {
     }
 
     void soulsSearched() {
-        System.out.println("Alma de " + name + " encontrada. Há " + amountSouls + " almas para coletar");
+        System.out.println("Alma de " + name + " encontrada. Há " + amountSouls + " almas para coletar\n");
     }
 
     public String toString() {
-        return "Amount souls " + amountSouls + "\nName: " + name + "\nNature Souls: " + natureSouls + "\nInfo: " + infoAbout;
+        return "Amount souls: " + amountSouls + "\nName: " + name + "\nNature Souls: " + natureSouls + "\nInfo: " + infoAbout + "\n";
     }
 }
 
 class Collector {
-    EnemySouls soulsCollected = null;
-    int numSouls = 0;
-    int maxSouls = 200;
+    EnemySouls soulsCollected;
+    int numSouls;
+    int maxSouls;
     int leftovers;
-    String typeSouls = "demon";
+    String typeSouls;
+    String nameSpell;
 
+    Collector() {
+        this.numSouls = 0;
+        this.maxSouls = 200;
+        this.typeSouls = "demon";
+    }
 
     void identifySouls() {
         if(soulsCollected != null) {
             System.out.println(soulsCollected);
         }else{
-            System.out.println("Nenhuma alma para ler informações");
+            System.out.println("Nenhuma alma para ler informações.\n");
         }
     }
 
     boolean collectSouls(EnemySouls target) {
         if(this.soulsCollected != null) {
-            System.out.println("That souls even collected.");
+            System.out.println("One souls already collected. Absorb or abandon it.\n");
             return false;
-        }else if(target.natureSouls.equals(typeSouls)) {
-            System.out.println("Souls collected");
+        }else if(this.soulsCollected != null && this.soulsCollected.equals(target)) {
+            System.out.println("That souls have already been collected. Try it another one.\n");
+        }else if(target.natureSouls.equals(this.typeSouls)) {
+            System.out.println("Souls collected.\n");
             soulsCollected = target;
             return true;
         }
@@ -65,13 +73,47 @@ class Collector {
             numSouls = maxSouls;
             System.out.println("Ah! You reached your promotion! Now you have a new souls to collect...\n");
         }else{
-            System.out.println("One more souls... It's getting interestanting");
+            System.out.println("One more souls... It's getting interestanting,\n");
         }
         soulsCollected = null;
     }
 
+    EnemySouls abandonSouls() {
+        if(soulsCollected == null) {
+            System.out.println("No more Souls collected...");
+            return null;
+        }
+        System.out.println("Souls abandoned");
+        EnemySouls aux = soulsCollected;
+        soulsCollected = null;
+        return aux;
+    }
+
+    void collectorPower(String nameSpell) {
+        switch (nameSpell) {
+            case "Soul's_Shout":
+                numSouls -= 20;
+                System.out.println("Feitiço " + nameSpell + " utilizado\n");
+                break;
+            case "Revitalize": 
+                numSouls -= 40;
+                System.out.println("Feitiço " + nameSpell + " utilizado\n");
+                break;
+            case "Decrepit_Vision":
+                numSouls -= 70;
+                System.out.println("Feitiço " + nameSpell + " utilizado\n");
+                break;
+            case "Bone_Armor":
+                numSouls -= 100;
+                System.out.println("Feitiço " + nameSpell + " utilizado\n");
+                break;
+            case "Cancelar":
+                break;
+        }
+    }
+
     public String toString() {
-        return "Amount souls " + numSouls + "/" + maxSouls + "\nLeftovers: " + leftovers + "\nType Collector: " + typeSouls + "\n";
+        return "Amount souls: " + numSouls + "/" + maxSouls + "\nLeftovers: " + leftovers + "\nType Collector: " + typeSouls + "\nSouls info: " + soulsCollected + "\n";
     }
 }
 
@@ -95,23 +137,26 @@ public class SoulsCollect {
             Random number = new Random();
             int soulsSelected = number.nextInt(5);
 
-            int qtdSouls = soulslist[soulsSelected].getAmountSouls();
-            String name = soulslist[soulsSelected].getName();
-            String nature = soulslist[soulsSelected].getNatureSouls();
-            String info = soulslist[soulsSelected].getInfoAbout();
-
-            EnemySouls demon = new EnemySouls(qtdSouls, name, nature, info);
 
             if(command[0].equals("identify")) {
                 souls.identifySouls();
-            }else if(command[0].equals("search")) {
-                demon.soulsSearched();
             }else if(command[0].equals("colect")) {
+
+                int qtdSouls = soulslist[soulsSelected].getAmountSouls();
+                String name = soulslist[soulsSelected].getName();
+                String nature = soulslist[soulsSelected].getNatureSouls();
+                String info = soulslist[soulsSelected].getInfoAbout();
+
+                EnemySouls demon = new EnemySouls(qtdSouls, name, nature, info);
+                demon.soulsSearched();
                 souls.collectSouls(demon);
+
             }else if(command[0].equals("absorb")) {
                 souls.absorbSouls();
-            }else if(command[0].equals("infoSouls")) {
-                souls.identifySouls();
+            }else if(command[0].equals("abandon")) {
+                souls.abandonSouls();
+            }else if(command[0].equals("spell")) {
+                souls.collectorPower(command[1]);
             }else if(command[0].equals("infoCollector")) {
                 System.out.println(souls);
             }else if(command[0].equals("end")) {
