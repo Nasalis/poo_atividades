@@ -106,15 +106,15 @@ public class SoulsCollect {
                 souls.identifySouls();
             }else if(command[0].equals("search")) {
                 demon.soulsSearched();
-            }else if(command[0].equals("coletar")) {
+            }else if(command[0].equals("colect")) {
                 souls.collectSouls(demon);
-            }else if(command[0].equals("absorver")) {
+            }else if(command[0].equals("absorb")) {
                 souls.absorbSouls();
             }else if(command[0].equals("infoSouls")) {
                 souls.identifySouls();
             }else if(command[0].equals("infoCollector")) {
                 System.out.println(souls);
-            }else if(command[0].equals("sair")) {
+            }else if(command[0].equals("end")) {
                 break;
             }
         }
