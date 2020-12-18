@@ -11,6 +11,7 @@ class Mission {
 
     int choiceOption() {
         Scanner decision = new Scanner(System.in);
+        decision.close();
         return this.choice = decision.nextInt(); 
     }
 
