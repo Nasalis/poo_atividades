@@ -1,3 +1,0 @@
-## Validação
-
-O seguinte projeto pessoal procura simular um sistema de registro de um conjunto de informações a fim de realizar o cadastro de um passaporte de um indivíduo em específico. Além disso, todos os registros serão armazenados em um um ArrayList de forma que sejam disponíveis para exibição a cada momento que um novo cadastro seja realizado. Como forma de criar um dinamismo nos registros, estou procurando criar uma forma de estruturar um código de vigilância dos cadastros na finalidade de verificar se não há nenhuma suspeita criminosa nos indivíduos cadastrados. Atualizações a de serem feitas furutamente...
