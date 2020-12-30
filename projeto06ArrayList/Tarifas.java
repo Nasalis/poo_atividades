@@ -23,11 +23,13 @@ class Operacao {
 class Conta {
     float saldo;
     int numero;
+    int conta;
     ArrayList<Operacao> extrato;
 
     public Conta(int numero) {
         this.numero = numero;
         this. extrato = new ArrayList<>();
+        this.conta = 0;
         extrato.add(new Operacao("abertura", 0, 0));
     }
 
@@ -93,9 +95,14 @@ class Conta {
     }
 
     public void extratoTotal() {
-        for(int i = 0; i < extrato.size(); i++) {
-            System.out.format(i + ":" + extrato.get(i) + "\n");
-        }
+        // for(int i = 0; i < extrato.size(); i++) {
+        //     System.out.format(i + ":" + extrato.get(i) + "\n");
+        // }
+        conta = 0;
+        extrato.forEach(item -> {
+            System.out.println(conta + ":" + item.descricao + ":" + item.valor + ":" + item.saldo);
+            conta++;
+        });
     }
 
     public String toString() {
