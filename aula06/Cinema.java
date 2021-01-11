@@ -15,8 +15,8 @@ class Cliente {
 }
 
 public class Cinema {
+    ArrayList<String> cadeiras;
     ArrayList<Cliente> clientes;
-    ArrayList<Cliente> cadeiras;
     ArrayList<Cliente> list;
 
     int tamanho;
@@ -29,34 +29,36 @@ public class Cinema {
     }
 
     void reservar(Cliente cliente, int indice) {
-        clientes.add(indice, cliente);
-        cadeiras.add(indice, clientes.get(indice));
-        // cadeiras.remove(indice);
+        if(list.get(indice) == null) {
+            cadeiras.add(indice, cliente.id+":"+cliente.fone);
+            // clientes.add(indice, cliente);
+            clientes.set(indice, cliente);
+            // list.remove(indice);
+        }
+    }
+
+    void cancelar(String nome) {
+        for(Cliente cliente : clientes) {
+            if(cliente.id.equals(nome)) {
+                int index = clientes.indexOf(cliente);
+                cadeiras.remove(index);
+                System.out.println(nome + " saiu");
+            }
+        }
     }
 
     public String toString() {
         String infoCadeiras = "";
-        String infoCinemas = "";
 
-        if(clientes.isEmpty()) {
-            for(int i = 0; i < tamanho; i++) {
-                cadeiras.add(i, new Cliente(" - ", ""));
-            }
-
-            infoCadeiras += "[";
-            for(int i = 0; i < tamanho; i++) {
-                infoCadeiras += cadeiras.get(i).id;
-            }
-            infoCadeiras += "]";
-            return infoCadeiras;
-        }
-        
-        infoCinemas += "[";
+    
         for(int i = 0; i < tamanho; i++) {
-            infoCinemas += cadeiras.get(i).id + ":" + cadeiras.get(i).fone + " ";
+            if(list.get(i) == null) {
+                cadeiras.add("-");
+                clientes.add(null);
+            }
         }
-        infoCinemas += "]";
-        return infoCinemas;
+
+        return infoCadeiras;
       
     }
 
@@ -66,9 +68,22 @@ public class Cinema {
         Cinema cinema = new Cinema(5);
         System.out.println(cinema.list);
         System.out.println(cinema);
+        System.out.println(cinema.cadeiras);
+        System.out.println(cinema.clientes);
         cinema.reservar(new Cliente("davi", "3232"), 0);
-        cinema.reservar(new Cliente("davi", "3232"), 1);
-        System.out.println(cinema);
+        cinema.reservar(new Cliente("eliana", "3131"), 2);
+        cinema.reservar(new Cliente("edvaldo", "4242"), 1);
+        System.out.println(cinema.cadeiras);
+
+        for(int i = 0; i < cinema.clientes.size(); i++) {
+            System.out.print("[ ");
+            System.out.print(cinema.clientes.get(i).id + ":" + cinema.clientes.get(i).fone);
+            System.out.print(" ]");
+        }
+        
+        cinema.cancelar("davi");
+        System.out.println(cinema.cadeiras);
+        // System.out.println(cinema);
 
 
     }
