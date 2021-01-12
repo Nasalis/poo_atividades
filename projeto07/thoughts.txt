@@ -1,0 +1,32 @@
+/*
+
+            amountPref = 1;
+          capacity - 1 <=> (5 - 1) = 4
+
+            0 1 2 3 4 I
+            @ = = = = =
+
+            amountPref = 2;
+          capacity - 1 <=> 5 - 1 = 4 
+            
+            0 1 2 3 4
+            @ @ = = =
+
+            amountPref = 3;
+          capacity - 1 <=> 5 - 1 = 4
+
+            0 1 2 3 4
+            @ @ @ = =
+
+            amountPref = 4;
+          capacity - 1 <=> 5 - 1 = 4 
+
+            0 1 2 3 4
+            @ @ @ @ =
+
+            amountPref = 5;
+          capacity - 1 <=> 5 - 1 = 4
+
+            0 1 2 3 4
+            @ @ @ @ @
+*/
