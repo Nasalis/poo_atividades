@@ -1,6 +1,5 @@
 package projetoAgendaV3;
 
-import java.util.Map.Entry;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Arrays;
@@ -16,14 +15,17 @@ class Fone {
         this.number = number;     
     }
 
-    public static boolean validate(String number) {
+    public static boolean validate(String fone) {
         String validValues = "1234567890-()";
 
-        for(int i = 0; i < number.length(); i++) {
-            if(validValues.indexOf(number.charAt(i)) == -1) {
+        for(int i = 0; i < fone.length() ; i++) {
+            if(validValues.indexOf(fone.charAt(i)) == -1) {
+                System.out.println("Número " + fone + " inválido");
                 return false;
             }
         }
+
+        System.out.println("Número " + fone + " registrado");
         return true;
     }
 
@@ -73,7 +75,8 @@ public class Agenda {
         if(contatos.isEmpty() || contatos.get(name) == null){
             contatos.put(name, new Contato(name));
             for(int i = 0; i < fones.size(); i++) {
-                contatos.get(name).numbers.add(fones.get(i));
+                if(Fone.validate(fones.get(i).number))
+                    contatos.get(name).numbers.add(fones.get(i));
             }
             return;
         }
@@ -187,7 +190,7 @@ public class Agenda {
     public static void main(String[] args) {
         Agenda agenda = new Agenda();
 
-        agenda.addContato("leticia", Arrays.asList(new Fone("tim", "23123"), new Fone("cla", "9999")));
+        agenda.addContato("leticia", Arrays.asList(new Fone("tim", "23d123"), new Fone("cla", "9999")));
         agenda.addContato("leticia", Arrays.asList(new Fone("tim", "66223"), new Fone("cla", "9779")));
         agenda.addContato("jardeane", Arrays.asList(new Fone("tim", "J66223"), new Fone("cla", "J9779")));
         agenda.addContato("jardeane", Arrays.asList(new Fone("tim", "J92102"), new Fone("cla", "J2252")));
