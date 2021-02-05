@@ -21,8 +21,8 @@ class Espiral {
 
 class Maquina {
     ArrayList<Espiral> espirais;
-    float saldoCliente = 0;
-    float lucro = 0;
+    float saldoCliente;
+    float lucro;
     float troco;
     int maxProdutos;
     int qtdEspirais;
@@ -30,6 +30,8 @@ class Maquina {
     public Maquina(int qtdEspirais, int maxProdutos) {
         this.maxProdutos = maxProdutos;
         this.qtdEspirais = qtdEspirais;
+        this.lucro = 0;
+        this.saldoCliente = 0;
         espirais = new ArrayList<>();        
     }
 

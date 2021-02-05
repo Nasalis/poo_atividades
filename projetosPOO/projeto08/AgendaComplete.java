@@ -138,6 +138,14 @@ public class AgendaComplete {
         return contatos;
     }
 
+    public ContatoTeste getContato(String name) {
+        for(int i = 0; i < contatos.size(); i++) {
+            if(contatos.get(i).name.equals(name))
+                return contatos.get(i);
+        }
+        return contatos.get(0);
+    }
+
     public String toString() {
         String output = "";
         contatos.sort(new OrdenaValores());
@@ -185,8 +193,10 @@ public class AgendaComplete {
         System.out.println(agenda);
 
         for(ContatoTeste contato : agenda.search("ja")) {
-            System.out.print(contato);
+            System.out.println(contato+"\n");
         }
-    
+        
+
+        System.out.println(agenda.getContato("jorge"));
     }
 }

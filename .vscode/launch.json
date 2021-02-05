@@ -1,0 +1,329 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Launch Busca",
+            "request": "launch",
+            "mainClass": "projeto08.Busca",
+            "projectName": "poo_atividades_32a3fa1f"
+        },
+        {
+            "type": "java",
+            "name": "Launch Animal",
+            "request": "launch",
+            "mainClass": "heranca.Animal",
+            "projectName": "poo_atividades_32a3fa1f"
+        },
+        {
+            "type": "java",
+            "name": "Launch JunkFood",
+            "request": "launch",
+            "mainClass": "JunkFood",
+            "projectName": "poo_atividades_32a3fa1f"
+        },
+        {
+            "type": "java",
+            "name": "Launch Salario",
+            "request": "launch",
+            "mainClass": "heranca.Salario",
+            "projectName": "poo_atividades_32a3fa1f"
+        },
+        {
+            "type": "java",
+            "name": "Launch Anotacoes",
+            "request": "launch",
+            "mainClass": "projetoAnotacoes.Anotacoes",
+            "projectName": "poo_atividades_32a3fa1f"
+        },
+        {
+            "type": "java",
+            "name": "Launch Excessao",
+            "request": "launch",
+            "mainClass": "aula10_excessoes.Excessao",
+            "projectName": "poo_atividades_32a3fa1f"
+        },
+        {
+            "type": "java",
+            "name": "Launch Agenda",
+            "request": "launch",
+            "mainClass": "Agenda",
+            "projectName": "poo_atividades_32a3fa1f"
+        },
+        {
+            "type": "java",
+            "name": "Launch Agenda",
+            "request": "launch",
+            "mainClass": "projetoAgendaV3.Agenda",
+            "projectName": "poo_atividades_32a3fa1f"
+        },
+        {
+            "type": "java",
+            "name": "Launch Agiota",
+            "request": "launch",
+            "mainClass": "projetoAgiota.Agiota",
+            "projectName": "poo_atividades_32a3fa1f"
+        },
+        {
+            "type": "java",
+            "name": "Launch Mapa",
+            "request": "launch",
+            "mainClass": "aula09_mapa.Mapa",
+            "projectName": "poo_atividades_32a3fa1f"
+        },
+        {
+            "type": "java",
+            "name": "Launch JunkFood",
+            "request": "launch",
+            "mainClass": "junkfood.JunkFood",
+            "projectName": "poo_atividades_32a3fa1f"
+        },
+        {
+            "type": "java",
+            "name": "Launch AgendaComplete",
+            "request": "launch",
+            "mainClass": "projeto08.AgendaComplete",
+            "projectName": "poo_atividades_32a3fa1f"
+        },
+        {
+            "type": "java",
+            "name": "Launch Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "Launch Array",
+            "request": "launch",
+            "mainClass": "ArrayList.Array",
+            "projectName": "poo_atividades_32a3fa1f"
+        },
+        {
+            "type": "java",
+            "name": "Launch ArrayListTest",
+            "request": "launch",
+            "mainClass": "ArrayList.aula07.ArrayListTest",
+            "projectName": "poo_atividades_32a3fa1f"
+        },
+        {
+            "type": "java",
+            "name": "Launch ArrayPoo",
+            "request": "launch",
+            "mainClass": "ArrayList.aula07.ArrayPoo",
+            "projectName": "poo_atividades_32a3fa1f"
+        },
+        {
+            "type": "java",
+            "name": "Launch ListaTest",
+            "request": "launch",
+            "mainClass": "ArrayList.aula07.ListaTest",
+            "projectName": "poo_atividades_32a3fa1f"
+        },
+        {
+            "type": "java",
+            "name": "Launch Exemplo",
+            "request": "launch",
+            "mainClass": "Exemplo",
+            "projectName": "poo_atividades_32a3fa1f"
+        },
+        {
+            "type": "java",
+            "name": "Launch Mensagens",
+            "request": "launch",
+            "mainClass": "Mensagens",
+            "projectName": "poo_atividades_32a3fa1f"
+        },
+        {
+            "type": "java",
+            "name": "Launch Validacao",
+            "request": "launch",
+            "mainClass": "ProjetosPessoais.Passaporte.Validacao",
+            "projectName": "poo_atividades_32a3fa1f"
+        },
+        {
+            "type": "java",
+            "name": "Launch Interativo",
+            "request": "launch",
+            "mainClass": "aula04.Interativo",
+            "projectName": "poo_atividades_32a3fa1f"
+        },
+        {
+            "type": "java",
+            "name": "Launch Mago",
+            "request": "launch",
+            "mainClass": "aula04.Mago",
+            "projectName": "poo_atividades_32a3fa1f"
+        },
+        {
+            "type": "java",
+            "name": "Launch Solver",
+            "request": "launch",
+            "mainClass": "aula04.Solver",
+            "projectName": "poo_atividades_32a3fa1f"
+        },
+        {
+            "type": "java",
+            "name": "Launch CalangoFight",
+            "request": "launch",
+            "mainClass": "aula05.CalangoFight",
+            "projectName": "poo_atividades_32a3fa1f"
+        },
+        {
+            "type": "java",
+            "name": "Launch CalangoFightTeste",
+            "request": "launch",
+            "mainClass": "aula05.CalangoFightTeste",
+            "projectName": "poo_atividades_32a3fa1f"
+        },
+        {
+            "type": "java",
+            "name": "Launch Cinema",
+            "request": "launch",
+            "mainClass": "aula06.Cinema",
+            "projectName": "poo_atividades_32a3fa1f"
+        },
+        {
+            "type": "java",
+            "name": "Launch Cinema_Resolucao",
+            "request": "launch",
+            "mainClass": "aula06.Cinema_Resolucao",
+            "projectName": "poo_atividades_32a3fa1f"
+        },
+        {
+            "type": "java",
+            "name": "Launch Agenda",
+            "request": "launch",
+            "mainClass": "aula07_ordenacao.Agenda",
+            "projectName": "poo_atividades_32a3fa1f"
+        },
+        {
+            "type": "java",
+            "name": "Launch Subscribe",
+            "request": "launch",
+            "mainClass": "aula07_ordenacao.Subscribe",
+            "projectName": "poo_atividades_32a3fa1f"
+        },
+        {
+            "type": "java",
+            "name": "Launch Calango",
+            "request": "launch",
+            "mainClass": "projeto02.Calango",
+            "projectName": "poo_atividades_32a3fa1f"
+        },
+        {
+            "type": "java",
+            "name": "Launch Carro",
+            "request": "launch",
+            "mainClass": "projeto02.Carro",
+            "projectName": "poo_atividades_32a3fa1f"
+        },
+        {
+            "type": "java",
+            "name": "Launch Quest",
+            "request": "launch",
+            "mainClass": "projeto02.Quest",
+            "projectName": "poo_atividades_32a3fa1f"
+        },
+        {
+            "type": "java",
+            "name": "Launch Riquinho",
+            "request": "launch",
+            "mainClass": "projeto03Cofre.Riquinho",
+            "projectName": "poo_atividades_32a3fa1f"
+        },
+        {
+            "type": "java",
+            "name": "Launch SoulsCollect",
+            "request": "launch",
+            "mainClass": "projeto03Cofre.projetoPessoal03.SoulsCollect",
+            "projectName": "poo_atividades_32a3fa1f"
+        },
+        {
+            "type": "java",
+            "name": "Launch Tamagoshi",
+            "request": "launch",
+            "mainClass": "projeto04Tamagoshi.Tamagoshi",
+            "projectName": "poo_atividades_32a3fa1f"
+        },
+        {
+            "type": "java",
+            "name": "Launch Contato",
+            "request": "launch",
+            "mainClass": "projeto05Contato.Contato",
+            "projectName": "poo_atividades_32a3fa1f"
+        },
+        {
+            "type": "java",
+            "name": "Launch Tarifas",
+            "request": "launch",
+            "mainClass": "projeto06ArrayList.Tarifas",
+            "projectName": "poo_atividades_32a3fa1f"
+        },
+        {
+            "type": "java",
+            "name": "Launch Validacao(1)",
+            "request": "launch",
+            "mainClass": "projeto06ArrayList.Validacao",
+            "projectName": "poo_atividades_32a3fa1f"
+        },
+        {
+            "type": "java",
+            "name": "Launch Topic",
+            "request": "launch",
+            "mainClass": "projeto07.Topic",
+            "projectName": "poo_atividades_32a3fa1f"
+        },
+        {
+            "type": "java",
+            "name": "Launch Agenda2",
+            "request": "launch",
+            "mainClass": "projeto08.Agenda2",
+            "projectName": "poo_atividades_32a3fa1f"
+        },
+        {
+            "type": "java",
+            "name": "Launch AgendaTeste",
+            "request": "launch",
+            "mainClass": "projeto08.AgendaTeste",
+            "projectName": "poo_atividades_32a3fa1f"
+        },
+        {
+            "type": "java",
+            "name": "Launch Calango(1)",
+            "request": "launch",
+            "mainClass": "projetos01inicio.Calango",
+            "projectName": "poo_atividades_32a3fa1f"
+        },
+        {
+            "type": "java",
+            "name": "Launch HelloWorld",
+            "request": "launch",
+            "mainClass": "projetos01inicio.HelloWorld",
+            "projectName": "poo_atividades_32a3fa1f"
+        },
+        {
+            "type": "java",
+            "name": "Launch Trampoline",
+            "request": "launch",
+            "mainClass": "pulapula.Trampoline",
+            "projectName": "poo_atividades_32a3fa1f"
+        },
+        {
+            "type": "java",
+            "name": "Launch Contato(1)",
+            "request": "launch",
+            "mainClass": "rcontato.Contato",
+            "projectName": "poo_atividades_32a3fa1f"
+        },
+        {
+            "type": "java",
+            "name": "Launch ContatoNew",
+            "request": "launch",
+            "mainClass": "rcontato.ContatoNew",
+            "projectName": "poo_atividades_32a3fa1f"
+        }
+    ]
+}
