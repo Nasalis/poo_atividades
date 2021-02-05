@@ -1,4 +1,4 @@
-package ProjetosPessoais.Passaporte;
+package projetosPOO.Passaporte;
 
 import java.util.ArrayList;
 import java.util.Arrays;

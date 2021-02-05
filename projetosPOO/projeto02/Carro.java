@@ -1,4 +1,4 @@
-package projeto02;
+package projetosPOO.projeto02;
 
 public class Carro {
 

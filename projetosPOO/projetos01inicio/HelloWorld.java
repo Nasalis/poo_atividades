@@ -1,4 +1,4 @@
-package projetos01inicio;
+package projetosPOO.projetos01inicio;
 
 public class HelloWorld {
     public static void main(String[] args) {

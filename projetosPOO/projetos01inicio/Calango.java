@@ -1,4 +1,4 @@
-package projetos01inicio;
+package projetosPOO.projetos01inicio;
 
 public class Calango {
     int bucho; //atributos

@@ -1,4 +1,4 @@
-package projeto06ArrayList.junkfood;
+package projetosPOO.projeto06ArrayList.junkfood;
 
 import java.util.ArrayList;
 import java.util.Scanner;

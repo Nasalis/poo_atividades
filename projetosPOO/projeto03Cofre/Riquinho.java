@@ -1,4 +1,4 @@
-package projeto03Cofre;
+package projetosPOO.projeto03Cofre;
 
 enum Moeda {
     M10(0.10f, 1),

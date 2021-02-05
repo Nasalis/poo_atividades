@@ -1,4 +1,4 @@
-package projeto07;
+package projetosPOO.projeto07;
 
 import java.util.ArrayList;
 import java.util.Collections;

@@ -1,4 +1,4 @@
-package projeto06ArrayList;
+package projetosPOO.projeto06ArrayList;
 
 import java.util.ArrayList;
 import java.util.Scanner;

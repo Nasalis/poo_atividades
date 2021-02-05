@@ -1,4 +1,4 @@
-package projeto08;
+package projetosPOO.projeto08;
 
 import java.util.ArrayList;
 import java.util.Comparator;

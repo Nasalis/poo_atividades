@@ -1,4 +1,4 @@
-package projeto05Contato;
+package projetosPOO.projeto05Contato;
 
 import java.util.ArrayList;
 import java.util.Scanner;

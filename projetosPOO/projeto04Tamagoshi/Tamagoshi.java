@@ -1,4 +1,4 @@
-package projeto04Tamagoshi;
+package projetosPOO.projeto04Tamagoshi;
 
 import java.util.Scanner;
 

@@ -1,4 +1,4 @@
-package projetoAnotacoes;
+package projetosPOO.projetoAnotacoes;
 
 import java.util.TreeMap;
 import java.util.Map.Entry;

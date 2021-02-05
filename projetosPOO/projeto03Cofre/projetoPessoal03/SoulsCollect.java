@@ -1,4 +1,4 @@
-package projeto03Cofre.projetoPessoal03;
+package projetosPOO.projeto03Cofre.projetoPessoal03;
 
 import java.util.Random;
 import java.util.Scanner;
