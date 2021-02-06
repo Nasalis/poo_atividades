@@ -1,0 +1,7 @@
+PARA TESTE:
+
+ancoradouro.ships.put("Windstoß", new Graneleiro("Windstoß", "C-634", TypesShips.GR));
+ancoradouro.ships.put("SharCross",new FerriBoat("SharCross", "F-124", TypesShips.FB, "viagem", 400, 500));
+ancoradouro.ships.put("Wortlos", new Petroleiro("Wortlos", "J-342", TypesShips.PT, "Suezmax", 0.4f));
+ancoradouro.ships.put("Ehre", new PortaContentor("Ehre", "X-2324", TypesShips.PC, 20));
+ancoradouro.ships.put("Ubermensch", new Quimico("Übermensch", "Z-1664", TypesShips.QU, "tipo-2"));
