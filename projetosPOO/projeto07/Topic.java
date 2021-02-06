@@ -110,6 +110,7 @@ public class Topic {
         topic.adicionarPassageiro(new Pass("leticia", 18));
         topic.adicionarPassageiro(new Pass("jorge", 20));
         topic.adicionarPassageiro(new Pass("jorge", 20));
+        topic.adicionarPassageiro(new Pass("amanda", 20));
         System.out.println(topic);
         topic.adicionarPassageiro(new Pass("rodrigo", 66));
         topic.adicionarPassageiro(new Pass("marcos", 76));

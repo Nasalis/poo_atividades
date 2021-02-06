@@ -1,4 +1,4 @@
-package aula10_excessoes;
+package aulasPOO.aula10_excessoes;
 
 import java.util.Scanner;
 

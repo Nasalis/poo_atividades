@@ -1,12 +1,8 @@
-package ArrayList.aula07;
+package aulasPOO.ArrayList.aula07;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-
-// import ArrayList.Array;
-
-// import java.util.Collections;
 
 class ArrayPoo {
     public static void main(String[] args) {

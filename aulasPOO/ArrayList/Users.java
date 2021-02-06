@@ -1,4 +1,4 @@
-package ArrayList;
+package aulasPOO.ArrayList;
 
 public class Users {
     private String nome;

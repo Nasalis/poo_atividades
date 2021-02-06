@@ -6,6 +6,27 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch Topic",
+            "request": "launch",
+            "mainClass": "projetosPOO.projeto07.Topic",
+            "projectName": "poo_atividades_32a3fa1f"
+        },
+        {
+            "type": "java",
+            "name": "Launch Topic2",
+            "request": "launch",
+            "mainClass": "Topic2",
+            "projectName": "poo_atividades_32a3fa1f"
+        },
+        {
+            "type": "java",
+            "name": "Launch Ancoradouro",
+            "request": "launch",
+            "mainClass": "projetosPOO.projetoAncoradouro.Ancoradouro",
+            "projectName": "poo_atividades_32a3fa1f"
+        },
+        {
+            "type": "java",
             "name": "Launch Busca",
             "request": "launch",
             "mainClass": "projeto08.Busca",

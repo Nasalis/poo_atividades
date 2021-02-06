@@ -1,4 +1,4 @@
-package aula05;
+package aulasPOO.aula05;
 
 class Inseto {
     int tamanho;

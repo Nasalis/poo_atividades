@@ -1,4 +1,4 @@
-package heranca;
+package aulasPOO.heranca;
 
 import java.util.ArrayList;
 import java.util.Scanner;

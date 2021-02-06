@@ -1,4 +1,4 @@
-package pulapula;
+package aulasPOO.pulapula;
 
 import java.util.ArrayList;
 

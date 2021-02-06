@@ -1,4 +1,4 @@
-package aula06;
+package aulasPOO.aula06;
 
 import java.util.ArrayList;
 

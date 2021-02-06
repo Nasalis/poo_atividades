@@ -1,4 +1,4 @@
-package aula09_mapa;
+package aulasPOO.aula09_mapa;
 
 import java.util.Map.Entry;
 import java.util.Arrays;

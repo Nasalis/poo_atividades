@@ -1,4 +1,4 @@
-package ArrayList;
+package aulasPOO.ArrayList;
 
 import java.util.ArrayList;
 

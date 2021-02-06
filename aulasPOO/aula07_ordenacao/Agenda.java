@@ -1,4 +1,4 @@
-package aula07_ordenacao;
+package aulasPOO.aula07_ordenacao;
 
 import java.util.ArrayList;
 import java.util.Comparator;
