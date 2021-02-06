@@ -1,5 +1,6 @@
 package projetosPOO.projetoAncoradouro;
 
+import java.util.Scanner;
 import java.util.TreeMap;
 
 interface Actions {
@@ -107,6 +108,35 @@ public class Ancoradouro {
         }
     }
 
+    public void typeShip() {
+        System.out.println("________________________________________________");
+        System.out.println("\n[]-[]-[]- |_ TIPOS DE NAVIOS _| -[]-[]-[]\n");
+        System.out.println("1 - GR - sigla para Graneleiro");
+        System.out.println("2 - FB - sigla para FerriBoat");
+        System.out.println("3 - PT - sigla para Petroleiro");
+        System.out.println("4 - PC - sigla para PortaContentor");
+        System.out.println("5 - QU - sigla para Quimico");
+        System.out.println("________________________________________________");
+
+    }
+
+    public void rulesRegister() {
+        System.out.println("\n[]-[]-[]- PARAMETROS DE REGISTRO DE NAVIOS -[]-[]-[]\n");
+        System.out.println("1 - Todos os navios precisam de um nome, código de identificação e a sigla do seu tipo declrados");
+        System.out.println("  1.1 - Para ver a lista de tipos de navios, digite 'registerShip'");
+        System.out.println("2 - Graneleiro:");
+        System.out.println("  - Esse navio não terá parâmetros adicionais");
+        System.out.println("3 - FerriBoat:");
+        System.out.println("  - Deve-se informar a sua função (viagem ou cargueiro) e a quantidade máxima de passageitos e produtos");
+        System.out.println("4 - Petroleiro:");
+        System.out.println("  - Informar-se-á a classe do navio e a gravidade específica do petróleo");
+        System.out.println("5 - PortaContentor:");
+        System.out.println("  - Informa-se o peso uniforme dos containers a serem transportados");
+        System.out.println("6 - Quimico:");
+        System.out.println("  - Como parâmetro, somente o seu tipo (tipo-1, tipo-2, tipo-3) para a escolha da rota\n");
+        System.out.println("Para especificações de cada navio, digite 'seeInfos' e o nome do navio");
+    }
+
     public String toString() {
         StringBuilder output = new StringBuilder();
         int listPosition = 0;
@@ -125,23 +155,89 @@ public class Ancoradouro {
         ancoradouro.ships.put("SharCross",new FerriBoat("SharCross", "F-124", TypesShips.FB, "viagem", 400, 500));
         ancoradouro.ships.put("Wortlos", new Petroleiro("Wortlos", "J-342", TypesShips.PT, "Suezmax", 0.4f));
         ancoradouro.ships.put("Ehre", new PortaContentor("Ehre", "X-2324", TypesShips.PC, 20));
-        ancoradouro.ships.put("Übermensch", new Quimico("Übermensch", "Z-1664", TypesShips.QU, "tipo-2"));
+        ancoradouro.ships.put("Ubermensch", new Quimico("Übermensch", "Z-1664", TypesShips.QU, "tipo-2"));
 
-        if(ancoradouro.ships.get("Windstoß") instanceof Graneleiro) {
-            Graneleiro graneleiro = (Graneleiro) ancoradouro.ships.get("Windstoß");
-            graneleiro.addProducts("banana", new Product("banana", "Brasil", "Alemanha", 500));
-            graneleiro.addProducts("café", new Product("café", "Brasil", "EUA", 500));
-            graneleiro.addProducts("arroz", new Product("arroz", "Japão", "China", 500));
+        Scanner scanner = new Scanner(System.in);
+        boolean running = true;
+
+        System.out.println("\nSeja bem-vindo ao sistema de notas! Veja os comados para integragir!");
+        System.out.println("1 - 'end' para sair");
+        System.out.println("2 - 'registerShip' registrará um novo navio com nome, código de identificação e a sigla do seu tipo");
+        System.out.println("     contudo cada tipo de navio contém parâmetros adicionais únicos de registro");
+        System.out.println("     para consultá-los, digite 'rulesRegister'");  
+        System.out.println("3 - 'typesShip' exibirá uma lista com os tipos de navio do ancoradouro");
+        System.out.println("4 - 'show' exibe a lista de navios registrados");
+        System.out.println("5 - 'manageShip' será o comando para efeutar ações nos navios");
+        System.out.println("  -  Graneleiro: poderá adicionar um produto, com nome, origem, destino e quantidade;");
+        System.out.println("  -  FerriBoat: poderá manusear a quantidade de passageiros ou produtos de acordo com sua função;");
+        System.out.println("  -  PortaContentor: poderá administrar a quantidade de containers;");
+        System.out.println("  -  Quimico: poderá administrar o volume que carrega a bordo;");
+
+        while(running) {
+            String line = scanner.nextLine();
+            String[] ui = line.split(" ");
+
+            try {
+                switch (ui[0]) {
+                    case "end":
+                        running = false;
+                        break;
+                    case "registerShip": {
+                        if(ui[3].equals("GR")) {
+                            ancoradouro.ships.put(ui[1], new Graneleiro(ui[1], ui[2], TypesShips.GR));
+                        }else if(ui[3].equals("FB")) {
+                            ancoradouro.ships.put(ui[1], new FerriBoat(ui[1], ui[2], TypesShips.GR, ui[4], Integer.parseInt(ui[5]), Integer.parseInt(ui[6])));
+                        }else if(ui[3].equals("PT")) {
+                            ancoradouro.ships.put(ui[1], new Petroleiro(ui[1], ui[2], TypesShips.PT, ui[4], Float.parseFloat(ui[5])));
+                        }else if(ui[3].equals("PC")) {
+                            ancoradouro.ships.put(ui[1],new PortaContentor(ui[1], ui[2], TypesShips.PC, Integer.parseInt(ui[4])));
+                        }else if(ui[3].equals("QU")) {
+                            ancoradouro.ships.put(ui[1], new Quimico(ui[1], ui[2], TypesShips.QU, ui[4]));
+                        }
+                        break;
+                    }
+                    case "rulesRegister":
+                        ancoradouro.rulesRegister();
+                        break;
+                    case "typesShip":
+                        ancoradouro.typeShip();;
+                        break;
+                    case "seeInfos":
+                        if(ancoradouro.ships.get(ui[1]) instanceof CargoShip) {
+                            CargoShip ship = (CargoShip) ancoradouro.ships.get(ui[1]);
+                            ancoradouro.seeInfos(ship);
+                        }
+                        break;
+                    case "manageShip":
+                        if(ancoradouro.ships.get(ui[1]) instanceof Graneleiro) {
+                            Graneleiro ship = (Graneleiro) ancoradouro.ships.get(ui[1]);
+                            ship.addProducts(ui[2], new Product(ui[2], ui[3], ui[4], Integer.parseInt(ui[5])));
+
+                        }else if(ancoradouro.ships.get(ui[1]) instanceof FerriBoat) {
+                            FerriBoat ship = (FerriBoat) ancoradouro.ships.get(ui[1]);
+                            if(ui[2].equals("pass"))
+                                ship.managePassagers(Integer.parseInt(ui[3]));
+                            else if(ui[2].equals("product"))
+                                ship.manageProducts(Integer.parseInt(ui[3]));
+
+                        }else if(ancoradouro.ships.get(ui[1]) instanceof PortaContentor) {
+                            PortaContentor ship = (PortaContentor) ancoradouro.ships.get(ui[1]);
+                            ship.manageContainer(Integer.parseInt(ui[2]));
+                        }else if(ancoradouro.ships.get(ui[1]) instanceof Quimico) {
+                            Quimico ship = (Quimico) ancoradouro.ships.get(ui[1]);
+                            ship.manageVolume(Integer.parseInt(ui[2]));
+                        }
+                        break;
+                    case "show":
+                        System.out.println(ancoradouro);
+                        break;
+                }
+            }catch(IndexOutOfBoundsException e) {
+                System.out.println("Fail: Esqueceu uma parte do comando. Verifique");
+            }
         }
 
-        System.out.println(ancoradouro);
-
-        System.out.println("-----------------------------\n");
-
-        if(ancoradouro.ships.get("Ehre") instanceof CargoShip) {
-            CargoShip ship = (CargoShip) ancoradouro.ships.get("Ehre");
-            ancoradouro.seeInfos(ship);
-        }
+        scanner.close();
         
     }
 }
