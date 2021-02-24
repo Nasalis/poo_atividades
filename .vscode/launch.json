@@ -6,6 +6,62 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch Calc",
+            "request": "launch",
+            "mainClass": "Calc",
+            "projectName": "poo_atividades_32a3fa1f"
+        },
+        {
+            "type": "java",
+            "name": "Launch Agenda2",
+            "request": "launch",
+            "mainClass": "AgendaV2.Agenda2",
+            "projectName": "poo_atividades_32a3fa1f"
+        },
+        {
+            "type": "java",
+            "name": "Launch Agenda",
+            "request": "launch",
+            "mainClass": "projetosPOO.contatoStar.Agenda",
+            "projectName": "poo_atividades_32a3fa1f"
+        },
+        {
+            "type": "java",
+            "name": "Launch Livros",
+            "request": "launch",
+            "mainClass": "Livros",
+            "projectName": "poo_atividades_32a3fa1f"
+        },
+        {
+            "type": "java",
+            "name": "Launch Twitter",
+            "request": "launch",
+            "mainClass": "projetosPOO.projetoTwitter.Twitter",
+            "projectName": "poo_atividades_32a3fa1f"
+        },
+        {
+            "type": "java",
+            "name": "Launch Trem",
+            "request": "launch",
+            "mainClass": "Trem.Trem",
+            "projectName": "poo_atividades_32a3fa1f"
+        },
+        {
+            "type": "java",
+            "name": "Launch Trem",
+            "request": "launch",
+            "mainClass": "Alice.Trem",
+            "projectName": "poo_atividades_32a3fa1f"
+        },
+        {
+            "type": "java",
+            "name": "Launch Jogo",
+            "request": "launch",
+            "mainClass": "projetosPOO.Pokemon.Jogo",
+            "projectName": "poo_atividades_32a3fa1f"
+        },
+        {
+            "type": "java",
             "name": "Launch Topic",
             "request": "launch",
             "mainClass": "projetosPOO.projeto07.Topic",

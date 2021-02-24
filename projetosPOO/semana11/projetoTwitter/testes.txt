@@ -1,0 +1,43 @@
+try {
+            twitter.addUser("goku");
+            twitter.addUser("sara");
+            twitter.addUser("tina");
+
+            System.out.println(twitter);
+            
+            twitter.follow("goku", "sara");
+            twitter.follow("goku", "tina");
+            twitter.follow("sara", "tina");
+            twitter.follow("goku", "sara");
+
+            
+            System.out.println(twitter);
+
+            twitter.sendTweet("sara", "hoje estou triste");
+            twitter.sendTweet("tina", "ganhei chocolate");
+            twitter.sendTweet("sara", "partiu rua");
+            twitter.sendTweet("tina", "chocolate ruim");
+            twitter.sendTweet("goku", "internet maldita");
+
+
+            twitter.repUsers.get("goku").getTimeline();
+            twitter.repUsers.get("sara").getTimeline();
+            twitter.repUsers.get("tina").getTimeline();
+
+            twitter.repUsers.get("sara").darLike("sara", 1);
+            twitter.repUsers.get("goku").darLike("goku", 1);
+            twitter.repUsers.get("sara").darLike("sara", 3);
+
+
+            twitter.repUsers.get("goku").getTimeline();
+            twitter.repUsers.get("sara").getTimeline();
+            twitter.repUsers.get("tina").getTimeline();
+
+            twitter.unfollow("goku", "tina");
+
+            System.out.println(twitter);
+        } catch (NullPointerException e) {
+            System.out.println(e.getMessage());
+        } catch(IndexOutOfBoundsException e) {
+            System.out.println(e.getMessage());
+        }
