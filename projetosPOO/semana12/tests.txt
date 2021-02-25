@@ -1,0 +1,33 @@
+agenda.adicionarCliente("Almir");
+agenda.adicionarCliente("Julia");
+agenda.adicionarCliente("Maria");
+
+System.out.println(agenda);
+
+agenda.contas.get(0).depositar(100);
+agenda.contas.get(1).depositar(200);
+agenda.contas.get(2).depositar(50);
+agenda.contas.get(3).depositar(300);
+
+agenda.contas.get(3).sacar(50);
+agenda.contas.get(0).sacar(70);
+agenda.contas.get(1).sacar(300);
+
+System.out.println(agenda);
+
+agenda.contas.get(3).transferir(agenda.contas.get(5), 200);
+agenda.contas.get(0).transferir(agenda.contas.get(4), 25);
+
+System.out.println(agenda);
+
+for(Conta conta : agenda.contas) {
+    if(conta instanceof ContaCorrente) {
+        ContaCorrente cc = (ContaCorrente) conta;
+        cc.atualizacaoMensal();
+    }else if(conta instanceof ContaPoupanca) {
+        ContaPoupanca cp = (ContaPoupanca) conta;
+        cp.atualizacaoMensal();
+    }
+}
+
+System.out.println(agenda);
